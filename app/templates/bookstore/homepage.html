@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container d-flex flex-wrap">
+
+    {% for book in books %}
+    <div class="card col-sm-4">
+        <img class="bookImage" src={{ url_for('static', filename='images/'+book['image']) }} />
+        <div class="card-body">
+          <h5 class="card-title">{{book.name}}</h5>
+          <p class="card-text">{{book.name}}</p>
+          <a href="book/{{book.id}}" class="btn btn-primary">Check Details</a>
+          <a href="book/updateABook/{{book.id}}" class="btn btn-primary">Update</a>
+          <a href="book/deleteABook/{{book.id}}" class="btn btn-primary">Delete</a>
+        </div>
+    </div>
+
+    {% endfor %}
+
+        
+{% endblock content %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Flask Test Site</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles/bootstrap.css')}}">
+    </head>
+    <body>
+        <div class="container border">
+            <div class="" id="logo">
+                <h1 class=""> Welcome to Amazon 1999.</h1>
+            </div>
+
+            <div class="container row">
+                <a href="/" class="col-sm-6 border d-flex"> Books </a>
+                <a href="/book/addNewBook" class="col-sm-6 border"> Add New Book </a>
+            </div>
+
+
+        {% block content %}
+ 
+        <p>If there were cards, they would have appeared here.</p>
+        
+        {% endblock content %}
+
+        </div>
+    </body>
+</html>
